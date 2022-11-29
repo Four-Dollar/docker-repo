@@ -1,0 +1,34 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    hostname: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+    volumes:
+      - postgresVolume:/data/db/postgres
+
+  backend:
+    restart: unless-stopped
+    container_name: backend
+    build:
+      context: ./backend-repo/fourdollar
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+
+volumes:
+  postgresVolume:
