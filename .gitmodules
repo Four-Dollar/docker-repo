@@ -1,6 +1,8 @@
 [submodule "Backend-repo"]
 	path = Backend-repo
 	url = https://github.com/Four-Dollar/Backend-repo.git
+	branch = develop
 [submodule "Frontend-repo"]
 	path = Frontend-repo
 	url = https://github.com/Four-Dollar/Frontend-repo.git
+	branch = develop
