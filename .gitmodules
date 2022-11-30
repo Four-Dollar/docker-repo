@@ -2,7 +2,7 @@
 	path = Backend-repo
 	url = https://github.com/Four-Dollar/Backend-repo.git
 	branch = develop
-[submodule "Frontend-repo"]
-	path = Frontend-repo
-	url = https://github.com/Four-Dollar/Frontend-repo.git
+[submodule "frontend-repo"]
+	path = frontend-repo
+	url = https://github.com/Four-Dollar/frontend-repo.git
 	branch = develop
