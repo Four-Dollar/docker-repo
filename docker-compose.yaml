@@ -23,6 +23,15 @@ services:
     depends_on:
       - db
 
+  front: 
+    build: 
+      context: "./frontend-repo"
+      dockerfile: dockerfile 
+    container_name: "front" 
+    working_dir: "/usr/src/app" 
+    ports: 
+      - "3000:3000"
+
   nginx:
     build: ./nginx
     ports:
